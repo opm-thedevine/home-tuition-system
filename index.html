@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Tuition Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Home Tuition Registration System</h1>
+        <p>Register as a teacher or find a home tuition teacher easily.</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Teacher Registration</h2>
+
+            <form id="teacherForm">
+                <label>Full Name</label>
+                <input type="text" id="teacherName" placeholder="Enter teacher name" required>
+
+                <label>Address</label>
+                <input type="text" id="teacherAddress" placeholder="Enter address" required>
+
+                <label>Qualification</label>
+                <input type="text" id="teacherQualification" placeholder="Example: BSc, BCA, M.Ed" required>
+
+                <label>Teaching Experience</label>
+                <input type="text" id="teacherExperience" placeholder="Example: 2 years" required>
+
+                <button type="submit">Register Teacher</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Student Registration</h2>
+
+            <form id="studentForm">
+                <label>Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter student name" required>
+
+                <label>Subject Needed</label>
+                <input type="text" id="studentSubject" placeholder="Example: Math, Science, English" required>
+
+                <label>Payment Offer</label>
+                <input type="number" id="studentPayment" placeholder="Enter payment amount" required>
+
+                <label>Contact Number</label>
+                <input type="text" id="studentContact" placeholder="Enter contact number" required>
+
+                <button type="submit">Register Student</button>
+            </form>
+        </section>
+        <section class="card full-width">
+    <h2>Registered Teachers</h2>
+    <button onclick="loadTeachers()">Load Teachers</button>
+    <div id="teachersList" class="data-list"></div>
+</section>
+
+<section class="card full-width">
+    <h2>Registered Students</h2>
+    <button onclick="loadStudents()">Load Students</button>
+    <div id="studentsList" class="data-list"></div>
+</section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
