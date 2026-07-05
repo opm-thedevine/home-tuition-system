@@ -12,7 +12,7 @@ teacherForm.addEventListener("submit", async function (event) {
     };
 
     try {
-        const response = await fetch("http://localhost:3000/register-teacher", {
+        const response = await fetch("/register-teacher", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -42,7 +42,7 @@ studentForm.addEventListener("submit", async function (event) {
     };
 
     try {
-        const response = await fetch("http://localhost:3000/register-student", {
+        const response = await fetch("/register-student", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -66,7 +66,7 @@ async function loadTeachers() {
     const teachersList = document.getElementById("teachersList");
 
     try {
-        const response = await fetch("http://localhost:3000/teachers");
+        const response = await fetch("/teachers");
         const teachers = await response.json();
 
         teachersList.innerHTML = "";
@@ -97,7 +97,7 @@ async function loadStudents() {
     const studentsList = document.getElementById("studentsList");
 
     try {
-        const response = await fetch("http://localhost:3000/students");
+        const response = await fetch("/students");
         const students = await response.json();
 
         studentsList.innerHTML = "";
